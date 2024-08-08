@@ -53,7 +53,6 @@ button.addEventListener('click', async () => {
         };
         // Add event listener to the source buffer to process the queue when the previous update ends
         sourceBuffer.addEventListener('updateend', processQueue);
-
         // Read the stream and push the chunks to the queue
         for await (const chunk of res.body) {
           // Push the chunk to the queue
